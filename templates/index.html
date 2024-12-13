@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obras de Dostoiévski</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Dostoiévski</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#personagens">Personagens</a></li>
+          <li class="nav-item"><a class="nav-link" href="#usuarios">Usuários</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section text-center">
+    <div class="container">
+      <h1 class="text-white">Obras de Dostoiévski</h1>
+      <p class="lead text-white">Perfis Filosóficos, Psicológicos e Religiosos</p>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <section id="carrossel" class="py-5">
+    <div class="container">
+      <div id="carouselBooks" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Brothers_Karamazov_cover.jpg" class="d-block w-100" alt="Os Irmãos Karamazov">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Os Irmãos Karamazov</h5>
+              <p>Análise sobre fé, moralidade e liberdade.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Crime_and_Punishment%2C_1866.jpg" class="d-block w-100" alt="Crime e Castigo">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Crime e Castigo</h5>
+              <p>Dilemas da culpa e redenção.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/The_Idiot_cover_1869.jpg" class="d-block w-100" alt="O Idiota">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>O Idiota</h5>
+              <p>A pureza em um mundo corrompido.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBooks" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBooks" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personagens -->
+  <section id="personagens" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Perfis dos Personagens</h2>
+      <div id="personagens-container" class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- Usuários -->
+  <section id="usuarios" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Gerenciamento de Usuários</h2>
+      <div id="usuarios-container" class="mb-4"></div>
+      <form id="cadastrar-form" class="form-inline">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" id="nome" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-primary text-white text-center py-3">
+    <p>&copy; 2024 Dostoiévski. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/script.js"></script>
+</body>
+</html>

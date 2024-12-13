@@ -1,0 +1,75 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "API Gerenciamento de Usuários",
+      "description": "Documentação da API para gerenciamento de usuários e integração com o front-end."
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/api/cadastrar_usuario": {
+        "post": {
+          "summary": "Cadastrar Usuário",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"},
+                  "email": {"type": "string"}
+                }
+              }
+            }
+          ],
+          "responses": {
+            "201": {"description": "Usuário cadastrado com sucesso"},
+            "400": {"description": "Dados insuficientes"}
+          }
+        }
+      },
+      "/api/buscar_usuarios": {
+        "get": {
+          "summary": "Buscar Usuários",
+          "responses": {
+            "200": {
+              "description": "Lista de usuários cadastrados",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {"type": "integer"},
+                    "name": {"type": "string"},
+                    "email": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/deletar_usuario/{user_id}": {
+        "delete": {
+          "summary": "Deletar Usuário",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "user_id",
+              "required": true,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "200": {"description": "Usuário deletado com sucesso"},
+            "404": {"description": "Usuário não encontrado"}
+          }
+        }
+      }
+    }
+  }
+  
